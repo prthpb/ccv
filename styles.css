@@ -1,0 +1,58 @@
+:root{
+  --accent:#0b6efd;
+  --bg:#ffffff;
+  --text:#222;
+  --muted:#666;
+  --max:1000px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);line-height:1.45}
+.container{max-width:var(--max);margin:0 auto;padding:16px}
+
+/* Header */
+.site-header{border-bottom:1px solid #eee;background:#fff}
+.brand{font-weight:700;text-decoration:none;color:var(--text);font-size:1.1rem;margin-right:16px;display:inline-block}
+.site-nav{display:flex;gap:12px;align-items:center;float:right}
+.site-nav a{text-decoration:none;color:var(--text);padding:10px;border-radius:6px}
+.site-nav a.active{background:var(--accent);color:#fff}
+
+/* Hero */
+.hero{padding:28px 0}
+.lead{color:var(--muted);margin-top:8px}
+
+/* Featured cards */
+.featured{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin-top:18px}
+.feature{background:#fff;border:1px solid #f2f2f2;padding:12px;border-radius:8px;text-align:left}
+.feature img{width:100%;height:140px;object-fit:cover;border-radius:6px}
+.btn{display:inline-block;margin-top:8px;padding:8px 12px;background:var(--accent);color:#fff;text-decoration:none;border-radius:6px}
+
+/* Spots list */
+.spot{display:flex;gap:12px;align-items:flex-start;padding:14px 0;border-bottom:1px solid #f5f5f5}
+.spot img{width:180px;height:120px;object-fit:cover;border-radius:6px}
+.spot-text h2{margin:0 0 6px}
+
+/* Gallery */
+.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px}
+.gallery img{width:100%;height:120px;object-fit:cover;border-radius:6px;cursor:zoom-in}
+
+/* Contact form */
+.contact-form{max-width:520px;margin-top:12px;display:flex;flex-direction:column;gap:10px}
+.contact-form input, .contact-form textarea{padding:8px;border:1px solid #ddd;border-radius:6px;font:inherit}
+.status{color:var(--muted);margin:4px 0 0}
+
+/* Lightbox */
+.lightbox{position:fixed;inset:0;background:rgba(0,0,0,0.75);display:none;align-items:center;justify-content:center;padding:18px;z-index:100}
+.lightbox img{max-width:90%;max-height:80vh;border-radius:6px}
+.lightbox[aria-hidden="false"]{display:flex}
+.lb-close{position:absolute;top:18px;right:18px;background:transparent;border:0;color:#fff;font-size:28px;cursor:pointer}
+
+/* Responsive */
+@media (max-width:900px){
+  .site-nav{float:none;display:flex;flex-wrap:wrap;margin-top:8px}
+}
+@media (max-width:700px){
+  .spot{flex-direction:column}
+  .spot img{width:100%}
+}
