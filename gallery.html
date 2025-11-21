@@ -4,16 +4,24 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>TouristSpot — Gallery</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <header class="site-header">
     <div class="container">
       <a class="brand" href="index.html">TouristSpot</a>
+
+      <div class="theme-control">
+        <button id="theme-toggle" aria-pressed="false" aria-label="Toggle theme">Light</button>
+      </div>
+
       <nav class="site-nav">
         <a href="index.html">Home</a>
         <a href="spots.html">Spots</a>
-        <a class="active" href="gallery.html">Gallery</a>
+        <a href="gallery.html" class="active">Gallery</a>
+        <a href="about.html">About</a>
         <a href="contact.html">Contact</a>
       </nav>
     </div>
@@ -21,10 +29,12 @@
 
   <main class="container">
     <h1>Gallery</h1>
+    <p class="muted">Click any image for a larger view.</p>
+
     <div class="gallery">
       <img src="et.png" alt="Eiffel Tower" class="lightbox-target" data-caption="Eiffel Tower — Paris, France" />
       <img src="gc.png" alt="Grand Canyon" class="lightbox-target" data-caption="Grand Canyon — Arizona, USA" />
-      <img src="gw.png" alt="Great Wall" class="lightbox-target" data-caption="Great Wall — China" />
+      <img src="gw.png" alt="Great Wall of China" class="lightbox-target" data-caption="Great Wall — China" />
       <img src="oh.png" alt="Sydney Opera House" class="lightbox-target" data-caption="Sydney Opera House — Sydney, Australia" />
       <img src="mp.png" alt="Machu Picchu" class="lightbox-target" data-caption="Machu Picchu — Peru" />
       <img src="stn.png" alt="Santorini" class="lightbox-target" data-caption="Santorini — Greece" />
@@ -32,6 +42,7 @@
     </div>
   </main>
 
+  <!-- Lightbox overlay -->
   <div id="lightbox" class="lightbox" aria-hidden="true">
     <button id="lb-close" class="lb-close" aria-label="Close">×</button>
     <img id="lb-img" alt="" />
@@ -41,4 +52,3 @@
   <script src="script.js" defer></script>
 </body>
 </html>
-
