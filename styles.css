@@ -1,12 +1,14 @@
+/* styles.css - red themed layout, full palette updated */
 
+/* Light Theme */
 :root {
-  --accent: #4a90e2;          
-  --accent-600: #2f74c8;       
-  --bg: #f5f7fa;               
-  --surface: #ffffff;          
-  --muted: #7a8492;             
-  --text: #1a2234;             
-  --card-shadow: 0 6px 18px rgba(30, 42, 60, 0.08);
+  --accent: #d7263d;             /* Main red */
+  --accent-600: #b71c2a;         /* Darker red */
+  --bg: #faf6f6;                 /* Soft warm background */
+  --surface: #ffffff;            /* Clean card surface */
+  --muted: #7d6f6f;              /* Muted warm grey */
+  --text: #1d1b1b;               /* Strong neutral text */
+  --card-shadow: 0 6px 18px rgba(90, 20, 30, 0.10);
   --radius: 12px;
   --gap: 16px;
   --container-max: 1100px;
@@ -19,15 +21,15 @@
 
 /* Dark Theme */
 :root[data-theme="dark"] {
-  --accent: #7bdcff;            /* Soft cyan */
-  --accent-600: #42c6ef;        /* Stronger cyan */
-  --bg: #0d1321;                /* Deep navy background */
-  --surface: #111a2b;           /* Dark card surface */
-  --muted: #a0a9b6;             /* Muted grey-blue text */
-  --text: #e8ecf3;              /* High-contrast text */
+  --accent: #ff6b6b;             /* Bright red for dark mode */
+  --accent-600: #ff4b4b;         /* Stronger red */
+  --bg: #121111;                 /* Deep charcoal */
+  --surface: #1b1a1a;            /* Dark cards */
+  --muted: #a59b9b;              /* Soft grey */
+  --text: #f4f2f2;               /* High-contrast text */
   --card-shadow: 0 8px 22px rgba(0,0,0,0.55);
-  --glass: rgba(20,28,44,0.8);
-  --nav-bg: rgba(20,28,44,0.9);
+  --glass: rgba(30,30,30,0.75);
+  --nav-bg: rgba(30,30,30,0.85);
   color-scheme: dark;
 }
 
@@ -58,7 +60,7 @@ body {
   z-index: 40;
   background: var(--nav-bg);
   backdrop-filter: blur(8px);
-  border-bottom: 1px solid rgba(120,130,150,0.2);
+  border-bottom: 1px solid rgba(180, 150, 150, 0.25);
 }
 .brand {
   font-weight: 700;
@@ -89,13 +91,13 @@ body {
   transition: background var(--transition), color var(--transition), transform 80ms;
 }
 .site-nav a:hover {
-  background: rgba(120,130,150,0.15);
+  background: rgba(200, 100, 100, 0.15);
   transform: translateY(-1px);
 }
 .site-nav a.active {
   background: var(--accent);
   color: #fff;
-  box-shadow: 0 6px 18px rgba(74,144,226,0.35);
+  box-shadow: 0 6px 18px rgba(215,38,61,0.35);
 }
 
 /* Theme Toggle */
@@ -110,7 +112,7 @@ body {
   font-weight: 600;
   font-size: 0.85rem;
   cursor: pointer;
-  box-shadow: 0 4px 12px rgba(15,23,42,0.1);
+  box-shadow: 0 4px 12px rgba(30,30,30,0.1);
   transition: background var(--transition), transform 80ms;
 }
 #theme-toggle:hover {
@@ -181,7 +183,7 @@ body {
   display: flex;
   gap: 16px;
   padding: 18px 0;
-  border-bottom: 1px solid rgba(120,130,150,0.18);
+  border-bottom: 1px solid rgba(200,100,100,0.2);
 }
 .spot img {
   width: 240px;
@@ -212,11 +214,11 @@ body {
   border-radius: 8px;
   cursor: zoom-in;
   transition: transform 120ms, box-shadow 120ms;
-  box-shadow: 0 4px 10px rgba(30,42,60,0.1);
+  box-shadow: 0 4px 10px rgba(50,20,20,0.1);
 }
 .gallery img:hover {
   transform: translateY(-3px);
-  box-shadow: 0 8px 20px rgba(30,42,60,0.2);
+  box-shadow: 0 8px 20px rgba(50,20,20,0.25);
 }
 
 /* Forms */
@@ -237,7 +239,7 @@ body {
 .contact-form textarea {
   padding: 8px 10px;
   border-radius: 8px;
-  border: 1px solid rgba(120,130,150,0.6);
+  border: 1px solid rgba(200,100,100,0.45);
   background: var(--surface);
   color: var(--text);
   font: inherit;
@@ -246,7 +248,7 @@ body {
 .contact-form textarea:focus {
   outline: none;
   border-color: var(--accent);
-  box-shadow: 0 0 0 1px rgba(74,144,226,0.45);
+  box-shadow: 0 0 0 1px rgba(215,38,61,0.45);
 }
 .status {
   color: var(--muted);
@@ -257,7 +259,7 @@ body {
 .lightbox {
   position: fixed;
   inset: 0;
-  background: rgba(15,23,42,0.75);
+  background: rgba(100,20,20,0.75);
   display: none;
   align-items: center;
   justify-content: center;
@@ -277,7 +279,7 @@ body {
   right: 20px;
   border: 0;
   background: transparent;
-  color: #e8ecf3;
+  color: #f4f2f2;
   font-size: 26px;
   cursor: pointer;
 }
